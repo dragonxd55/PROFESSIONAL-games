@@ -99,7 +99,7 @@ client.on('message', message => {
                 points[won.id].points++;
               })
               .catch(collected => {
-                message.channel.send(`:x: **لم يتمكن احد من تفكيك الكلمه في الوقت المناسب**`);
+                message.channel.send(`:x: **لم يتمكن احد من تركيب الكلمه في الوقت المناسب**`);
           console.log('[Typing] Error: No one type the word.');
               })
         })
@@ -125,13 +125,13 @@ client.on('message', message => {
     msg.channel.send(`${item.type}`).then(() => {
             message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] })
             .then((collected) => {
-        message.channel.send(`${collected.first().author} ✅ **احسنت لقد تمكنت من تفكيك الكلمه بسرعه**`);
+        message.channel.send(`${collected.first().author} ✅ **احسنت لقد تمكنت من أجابه عن معادله بسرعه**`);
         console.log(`[Typing] ${collected.first().author} typed the word.`);
                 let won = collected.first().author;
                 points[won.id].points++;
               })
               .catch(collected => {
-                message.channel.send(`:x: **لم يتمكن احد من تفكيك الكلمه في الوقت المناسب**`);
+                message.channel.send(`:x: **لم يتمكن احد من حل معادله في الوقت المناسب**`);
           console.log('[Typing] Error: No one type the word.');
               })
         })
@@ -189,13 +189,13 @@ msg.channel.send(`${item.type}`).then(() => {
       msg.channel.send(`${item.type}`).then(() => {
               message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] })
               .then((collected) => {
-          message.channel.send(`${collected.first().author} ✅ **احسنت لقد تمكنت من تفكيك الكلمه بسرعه**`);
+          message.channel.send(`${collected.first().author} ✅ **احسنت لقد تمكنت من كتابه هذه الكلمه بسرعه**`);
           console.log(`[Typing] ${collected.first().author} typed the word.`);
                   let won = collected.first().author;
                   points[won.id].points++;
                 })
                 .catch(collected => {
-                  message.channel.send(`:x: **لم يتمكن احد من تفكيك الكلمه في الوقت المناسب**`);
+                  message.channel.send(`:x: **لم يتمكن احد من كتابه هذه الكلمه في الوقت المناسب**`);
             console.log('[Typing] Error: No one type the word.');
                 })
           })
