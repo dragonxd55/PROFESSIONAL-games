@@ -261,5 +261,40 @@ client.on('message', message => {
     
      });
 
+
+
+client.on("message", message => {
+ if (message.content === "_help") {
+        message.react("✅")
+           message.react("📬")
+  const embed = new Discord.RichEmbed() 
+      .setColor("#ffff00")
+     .setDescription(`
+══════════ஜ۩۞۩ஜ════════════  
+
+
+     🎮「العاب」🎮
+
+   🎮_فكك
+
+   🎮_لغز
+   
+   🎮_كتابه
+
+   🎮_رياضيات
+
+   🎮_شقلب
+
+   🎮_ركب
+
+══════════ஜ۩۞۩ஜ════════════ 
+ `)
+
+   message.author.sendEmbed(embed)
+   
+   }
+   }); 
+
+
 client.login(process.env.BOT_TOKEN);
 
